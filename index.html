@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page-title">Unlock App Premium bằng ShadowRocket</title>
+    <meta name="description" content="Hướng dẫn Unlock App Premium trên iPhone bằng ShadowRocket với link Config và Module.">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="icon" type="image/png" href="./assets/img/shadowrocket.webp"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .copy-btn:hover {
+            transform: scale(1.05);
+        }
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+        :root {
+            --all-in-app: #93c5fd; 
+            --all-in-app-strong: #2563eb; 
+            --yellow: #fcd34d; 
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-blue-50 via-white to-white min-h-screen text-gray-900">
+
+    <!-- Decorative Background -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-gradient-to-tr from-blue-200 to-sky-200 blur-3xl opacity-50"></div>
+        <div class="absolute -bottom-28 -right-24 w-96 h-96 rounded-full bg-gradient-to-tr from-sky-200 to-indigo-200 blur-3xl opacity-50"></div>
+        <div class="absolute top-1/3 -right-16 w-64 h-64 rounded-full bg-gradient-to-br from-indigo-200 to-blue-200 blur-3xl opacity-40"></div>
+        <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 1px 1px, rgba(37,99,235,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+        <div id="toastContent" class="opacity-0 translate-y-2 transition-all duration-300">
+            <div class="pointer-events-none bg-gradient-to-r from-blue-500 to-sky-400 text-black rounded-full px-4 py-2 shadow-xl ring-1 ring-blue-300/60 flex items-center gap-2">
+                <span class="text-lg">✨</span>
+                <span id="toastMessage" class="text-sm font-semibold">Đã sao chép!</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="relative z-10 max-w-md mx-auto px-4 py-16">
+        <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-200" data-aos="fade-up">
+            <div class="text-center mb-8">
+                <div class="mx-auto mb-3 w-12 h-12 rounded-xl flex items-center justify-center" style="background-color: var(--all-in-app)">
+                    <span class="text-2xl">🚀</span>
+                </div>
+                <h1 class="text-3xl font-bold mb-2 text-gray-900">Unlock App <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-sky-400">Premium</span></h1>
+                <p class="text-gray-600" data-i18n="subtitle">Dành cho iPhone sử dụng ứng dụng <span class="font-semibold">ShadowRocket</span></p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Links (Config & Module) -->
+                <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                    <h2 class="text-xl font-semibold mb-4 flex items-center text-gray-900">
+                        <i data-feather="link" class="mr-2"></i> <span data-i18n="config-title">Link cấu hình ShadowRocket</span>
+                    </h2>
+                    <div class="space-y-5">
+                        <!-- Notice -->
+                        <div class="rounded-xl p-4 border border-amber-200 bg-amber-50">
+                            <div class="flex items-start">
+                                <div class="mt-0.5 mr-3">
+                                    <div class="w-6 h-6 rounded-md flex items-center justify-center" style="background-color: var(--yellow)">
+                                        <i data-feather="alert-triangle" class="w-4 h-4 text-black"></i>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-800">
+                                    <p class="font-semibold mb-1" data-i18n="note-title">Lưu ý</p>
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li data-i18n="note-1">Muốn sử dụng premium thì <span class="font-semibold">phải bật VPN trong ShadowRocket</span>.</li>
+                                        <li data-i18n="note-2">Không dùng nữa thì <span class="font-semibold">tắt đi</span> để tránh hao pin và nóng máy.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+<!-- Locket Config Link -->
+            <div class="mt-6 bg-gray-50 rounded-xl p-5 border border-gray-200"> 
+                <h2 class="text-xl font-semibold mb-3 flex items-center text-gray-900"> 
+                    <i data-feather="heart" class="mr-2"></i> <span data-i18n="locket-cfg-title">Config duy trì Locket Gold</span> 
+                </h2> 
+                <p class="text-sm text-gray-600 mb-4" data-i18n="locket-cfg-desc">Cài đặt Config này sau khi đã kích hoạt Locket Gold thành công.</p> 
+                <a href="assets/Locket.mobileconfig" download class="w-full bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-600 hover:to-amber-500 focus:ring-2 focus:ring-amber-300 focus:outline-none text-black font-semibold py-2 px-4 rounded-lg transition-all inline-flex items-center justify-center gap-2"> 
+                    <i data-feather="settings" class="w-5 h-5"></i> 
+                    <span data-i18n="btn-install-cfg">Cài đặt Config</span> 
+                </a> 
+            </div>
